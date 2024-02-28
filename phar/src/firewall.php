@@ -125,10 +125,13 @@ $monitorpid = start_monitor();
 
 // Flush all iptables rules
 $f = $v->checkFile("bin/clean-iptables");
+wall("Flushing iptables....\n");
+wall($f);
 `$f`;
 
 // Start fail2ban if we can
 if($id_service == "enabled"){
+	wall("Fail2ban starting....\n");
 	`service fail2ban start`;
 }
 
@@ -163,6 +166,7 @@ include_once $path;
 $netobj = new \FreePBX\modules\Firewall\Network;
 
 $known = $netobj->discoverInterfaces();
+wall("adding interfaces....\n");
 foreach ($known as $int => $conf) {
 	// If this is an alias, skip
 	if (isset($conf['config']['PARENT'])) {
@@ -183,6 +187,7 @@ $fwconf = getSettings();
 if (!empty($fwconf['networkmaps'])) {
 	$nets = @json_decode($fwconf['networkmaps'], true);
 }
+wall("adding networks....\n");
 if ($nets && is_array($nets)) {
 	foreach ($nets as $n => $zone) {
 		if (strpos($n, "/") === false) {
@@ -190,6 +195,8 @@ if ($nets && is_array($nets)) {
 			continue;
 		}
 		list($network, $cidr) = explode("/", $n);
+		wall("$zone....\n");
+		wall("$network....\n");
 		$driver->addNetworkToZone($zone, $network, $cidr);
 	}
 }
