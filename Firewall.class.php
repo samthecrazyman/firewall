@@ -2291,7 +2291,7 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 				$net_dec = ip2long($network);
 
 				// Create our bitmap. This creates 1's of the CIDR, 00000000.00000000.00000000.11111111
-				$wildcard = pow( 2, ( $basecidr - $cidr ) ) - 1;
+				$wildcard = (int)pow( 2, ( $basecidr - $cidr ) ) - 1;
 				// This inverts it, so it's 11111111.11111111.11111111.00000000
 				$netmask = ~ $wildcard;
 
