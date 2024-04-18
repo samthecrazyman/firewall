@@ -12,6 +12,7 @@ class Iptables {
 	private $wlock = "";
 
 	public function __construct() {
+		`echo ==== __construct ==== >> /var/log/asterisk/freepbx.log`;
 		if (version_compare(\PHP_VERSION, '5.6') >= 0) {
 			$this->wlock = "-w5 -W10000";
 		}
@@ -94,6 +95,7 @@ class Iptables {
 
 	// Root process
 	public function addNetworkToZone($zone = false, $network = false, $cidr = false) {
+		`echo ==== addNetworkToZone ==== >> /var/log/asterisk/freepbx.log`;
 		$this->checkFpbxFirewall();
 
 		// Make sure this zone exists
@@ -155,6 +157,7 @@ class Iptables {
 
 	// Root process
 	public function removeNetworkFromZone($zone = false, $network = false, $cidr = false) {
+		`echo ==== removeNetworkFromZone ==== >> /var/log/asterisk/freepbx.log`;
 
 		$this->checkFpbxFirewall();
 
@@ -198,6 +201,7 @@ class Iptables {
 
 	// Root process
 	public function changeNetworksZone($newzone = false, $network = false, $cidr = false) {
+		`echo ==== changeNetworksZone ==== >> /var/log/asterisk/freepbx.log`;
 		$this->checkFpbxFirewall();
 
 		// Check to see if we have a cidr or not.
@@ -251,6 +255,7 @@ class Iptables {
 
 	// Root process
 	public function updateService($service = false, $ports = false) {
+		`echo ==== updateService ==== >> /var/log/asterisk/freepbx.log`;
 		$this->checkFpbxFirewall();
 
 		if (strlen($service) > 16) {
@@ -396,6 +401,7 @@ class Iptables {
 
 	// Root process
 	public function updateServiceZones($service = false, $zones = false) {
+		`echo ==== updateServiceZones ==== >> /var/log/asterisk/freepbx.log`;
 		$this->checkFpbxFirewall();
 		$current = &$this->getCurrentIptables();
 
@@ -466,6 +472,7 @@ class Iptables {
 
 	// Root process
 	public function changeInterfaceZone($iface = false, $newzone = false) {
+		`echo ==== changeInterfaceZone ==== >> /var/log/asterisk/freepbx.log`;
 		$this->checkFpbxFirewall();
 
 		// Interfaces are checked AFTER networks, so that source networks
@@ -893,6 +900,7 @@ class Iptables {
 
 	// Root process
 	public function updateRegistrations($hosts) {
+		`echo ==== updateRegistrations ==== >> /var/log/asterisk/freepbx.log`;
 		// Allow registered hosts through without hitting the rate limits
 		$this->checkTarget("fpbxregistrations");
 		// Run through the hosts and add them to what we WANT our chains to be
@@ -1087,6 +1095,7 @@ class Iptables {
 
 	// Root process
 	public function updateHostZones($hosts) {
+		`echo ==== updateHostZones ==== >> /var/log/asterisk/freepbx.log`;
 		// Make sure our table exists
 		$this->checkTarget("fpbxhosts");
 
