@@ -78,10 +78,12 @@ switch ($action) {
 			throw new \Exception("No ports provided");
 		}
 		foreach($settings['ports'] as $port) {
+			`echo "ipset add -exist $ipset $port" >> /var/log/asterisk/freepbx_dbug`;
 			exec("ipset add -exist $ipset $port");
 		}
 		break;
 	case 'flush':
+		 `echo "ipset flush $ipset" >> /var/log/asterisk/freepbx_dbug`;
 		exec("ipset flush $ipset");
 		break;
 	default:
