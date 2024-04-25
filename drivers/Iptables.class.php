@@ -1598,10 +1598,10 @@ class Iptables {
 		// Set up lefilter chain
 		$retarr['lefilter'][] = array("other" => "-m state --state NEW -j CONNMARK --set-mark 0x20");
 		$retarr['lefilter'][] = array("other" => "-m state --state NEW -j ACCEPT");
-		$retarr['lefilter'][] = array("ipvers" => "4", "other" => "-m string --string \"GET /.well-known/acme-challenge/\" --algo kmp --from 52 --to 53 -j ACCEPT");
-		$retarr['lefilter'][] = array("ipvers" => "6", "other" => "-m string --string \"GET /.well-known/acme-challenge/\" --algo kmp --from 72 --to 73 -j ACCEPT");
-		$retarr['lefilter'][] = array("ipvers" => "4", "other" => "-m string --string \"GET /.freepbx-known/\" --algo kmp --from 52 --to 53 -j ACCEPT");
-		$retarr['lefilter'][] = array("ipvers" => "6", "other" => "-m string --string \"GET /.freepbx-known/\" --algo kmp --from 72 --to 73 -j ACCEPT");
+		$retarr['lefilter'][] = array("ipvers" => "4", "other" => "-m string --string \"GET /.well-known/acme-challenge/\" --algo kmp -j ACCEPT");
+		$retarr['lefilter'][] = array("ipvers" => "6", "other" => "-m string --string \"GET /.well-known/acme-challenge/\" --algo kmp -j ACCEPT");
+		$retarr['lefilter'][] = array("ipvers" => "4", "other" => "-m string --string \"GET /.freepbx-known/\" --algo kmp -j ACCEPT");
+		$retarr['lefilter'][] = array("ipvers" => "6", "other" => "-m string --string \"GET /.freepbx-known/\" --algo kmp -j ACCEPT");
 		$retarr['lefilter'][] = array("other" => "-j RETURN");
 		
 		//This adds unknown packets to a 90 second whitelist
