@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-06 04:37-0500\n"
+"POT-Creation-Date: 2024-05-09 07:48-0400\n"
 "PO-Revision-Date: 2018-07-28 08:00+0000\n"
 "Last-Translator: Bastian Mertgen <b.mertgen@bastian-mertgen.de>\n"
 "Language-Team: German <http://*/projects/freepbx/firewall/de/>\n"
@@ -584,7 +584,7 @@ msgid "Custom Rules"
 msgstr ""
 
 #: views/page.services.php:38 views/view.customsvc.php:4
-#: views/view.portmaps.php:23
+#: views/view.portmaps.php:28
 msgid "Custom Services"
 msgstr "Benutzerdefinierte Services"
 
@@ -844,7 +844,7 @@ msgstr ""
 msgid "External Address: %s"
 msgstr "Externe Adresse: %s"
 
-#: views/page.services.php:35 views/view.portmaps.php:17
+#: views/page.services.php:35 views/view.portmaps.php:22
 msgid "Extra Services"
 msgstr "Zusatzleistungen"
 
@@ -1502,7 +1502,7 @@ msgstr ""
 msgid "No Banned IP's"
 msgstr ""
 
-#: views/view.portmaps.php:26
+#: views/view.portmaps.php:31
 msgid "No Custom services defined."
 msgstr "Keine Benutzerdefinierten Dienste definiert."
 
@@ -1928,7 +1928,7 @@ msgstr ""
 msgid "Save and Apply"
 msgstr ""
 
-#: views/view.portmaps.php:36
+#: views/view.portmaps.php:41
 msgid "See Custom Service page"
 msgstr "Siehe Seite für benutzerdefinierte Dienste"
 
@@ -1938,7 +1938,7 @@ msgid ""
 "not change your current settings."
 msgstr ""
 
-#: views/view.portmaps.php:39
+#: views/view.portmaps.php:44
 msgid "Service unavailable"
 msgstr "Dienst nicht Verfügbar"
 
@@ -2159,11 +2159,11 @@ msgstr ""
 msgid "TCP"
 msgstr "TCP"
 
-#: views/view.portmaps.php:65
+#: views/view.portmaps.php:70
 msgid "TCP Port:"
 msgstr ""
 
-#: views/view.portmaps.php:68
+#: views/view.portmaps.php:73
 msgid "TCP Ports:"
 msgstr ""
 
@@ -2569,11 +2569,11 @@ msgstr ""
 msgid "UDP"
 msgstr ""
 
-#: views/view.portmaps.php:54
+#: views/view.portmaps.php:59
 msgid "UDP Port:"
 msgstr ""
 
-#: views/view.portmaps.php:57
+#: views/view.portmaps.php:62
 msgid "UDP Ports:"
 msgstr ""
 

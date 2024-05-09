@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-06 04:37-0500\n"
+"POT-Creation-Date: 2024-05-09 07:48-0400\n"
 "PO-Revision-Date: 2017-08-09 11:27+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -613,7 +613,7 @@ msgid "Custom Rules"
 msgstr ""
 
 #: views/page.services.php:38 views/view.customsvc.php:4
-#: views/view.portmaps.php:23
+#: views/view.portmaps.php:28
 msgid "Custom Services"
 msgstr "Tùy chỉnh các dịch vụ"
 
@@ -892,7 +892,7 @@ msgstr ""
 msgid "External Address: %s"
 msgstr "Địa chỉ bên ngoài: %s"
 
-#: views/page.services.php:35 views/view.portmaps.php:17
+#: views/page.services.php:35 views/view.portmaps.php:22
 msgid "Extra Services"
 msgstr "Dịch vụ bổ sung"
 
@@ -1595,7 +1595,7 @@ msgstr ""
 msgid "No Banned IP's"
 msgstr ""
 
-#: views/view.portmaps.php:26
+#: views/view.portmaps.php:31
 msgid "No Custom services defined."
 msgstr "Không có tùy chỉnh dịch vụ naog được xác định."
 
@@ -2073,7 +2073,7 @@ msgstr ""
 msgid "Save and Apply"
 msgstr ""
 
-#: views/view.portmaps.php:36
+#: views/view.portmaps.php:41
 msgid "See Custom Service page"
 msgstr "Xem trang Custom Service (Dịch vụ tùy chỉnh)"
 
@@ -2085,7 +2085,7 @@ msgstr ""
 "Chọn \"Yes\" sẽ cập nhật cấu hình hiện tại của bạn. Chọn \"No\" sẽ để nguyên "
 "các cài đặt hiện tại của bạn."
 
-#: views/view.portmaps.php:39
+#: views/view.portmaps.php:44
 msgid "Service unavailable"
 msgstr "Dịch vụ không khả dụng"
 
@@ -2308,11 +2308,11 @@ msgstr "Firewall Hệ thống"
 msgid "TCP"
 msgstr "TCP"
 
-#: views/view.portmaps.php:65
+#: views/view.portmaps.php:70
 msgid "TCP Port:"
 msgstr "Cổng giao tiếp TCP:"
 
-#: views/view.portmaps.php:68
+#: views/view.portmaps.php:73
 msgid "TCP Ports:"
 msgstr "Các cổng giao tiếp TCP:"
 
@@ -2790,11 +2790,11 @@ msgstr ""
 msgid "UDP"
 msgstr "UDP"
 
-#: views/view.portmaps.php:54
+#: views/view.portmaps.php:59
 msgid "UDP Port:"
 msgstr "Cổng UDP:"
 
-#: views/view.portmaps.php:57
+#: views/view.portmaps.php:62
 msgid "UDP Ports:"
 msgstr "Các cổng UDP:"
 

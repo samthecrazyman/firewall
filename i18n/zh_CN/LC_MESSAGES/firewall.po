@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FreePBX 2.5 Chinese Translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-06 04:37-0500\n"
+"POT-Creation-Date: 2024-05-09 07:48-0400\n"
 "PO-Revision-Date: 2018-03-14 14:52+0200\n"
 "Last-Translator: james <zhulizhong@gmail.com>\n"
 "Language-Team: Simplified Chinese <http://weblate.freepbx.org/projects/"
@@ -576,7 +576,7 @@ msgid "Custom Rules"
 msgstr ""
 
 #: views/page.services.php:38 views/view.customsvc.php:4
-#: views/view.portmaps.php:23
+#: views/view.portmaps.php:28
 msgid "Custom Services"
 msgstr ""
 
@@ -835,7 +835,7 @@ msgstr ""
 msgid "External Address: %s"
 msgstr ""
 
-#: views/page.services.php:35 views/view.portmaps.php:17
+#: views/page.services.php:35 views/view.portmaps.php:22
 msgid "Extra Services"
 msgstr ""
 
@@ -1491,7 +1491,7 @@ msgstr ""
 msgid "No Banned IP's"
 msgstr ""
 
-#: views/view.portmaps.php:26
+#: views/view.portmaps.php:31
 msgid "No Custom services defined."
 msgstr ""
 
@@ -1914,7 +1914,7 @@ msgstr ""
 msgid "Save and Apply"
 msgstr ""
 
-#: views/view.portmaps.php:36
+#: views/view.portmaps.php:41
 msgid "See Custom Service page"
 msgstr ""
 
@@ -1924,7 +1924,7 @@ msgid ""
 "not change your current settings."
 msgstr ""
 
-#: views/view.portmaps.php:39
+#: views/view.portmaps.php:44
 msgid "Service unavailable"
 msgstr ""
 
@@ -2145,11 +2145,11 @@ msgstr "系统防火墙"
 msgid "TCP"
 msgstr ""
 
-#: views/view.portmaps.php:65
+#: views/view.portmaps.php:70
 msgid "TCP Port:"
 msgstr ""
 
-#: views/view.portmaps.php:68
+#: views/view.portmaps.php:73
 msgid "TCP Ports:"
 msgstr ""
 
@@ -2555,11 +2555,11 @@ msgstr ""
 msgid "UDP"
 msgstr ""
 
-#: views/view.portmaps.php:54
+#: views/view.portmaps.php:59
 msgid "UDP Port:"
 msgstr ""
 
-#: views/view.portmaps.php:57
+#: views/view.portmaps.php:62
 msgid "UDP Ports:"
 msgstr ""
 
