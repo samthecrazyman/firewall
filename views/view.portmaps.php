@@ -10,7 +10,12 @@ $customsvc = $services['custom'];
 <p><?php echo _("This page displays the detected ports and port ranges for all known services."); ?></p>
 <h3><?php echo _("Core Services"); ?></h3>
 <?php
+$version = \FreePBX::Config()->get('ASTVERSION');
+$vercompare = version_compare($version, '21', 'ge');
 foreach ($coresvc as $svc) {
+	if($svc == 'chansip' && $vercompare) {
+		continue;
+	}
 	displayService($fw, $svc);
 }
 ?>
