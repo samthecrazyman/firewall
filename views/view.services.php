@@ -3,7 +3,12 @@
   <p><?php echo _("Services that are assigned to zones <strong>are accessible</strong> to connections matching the zones."); ?></p>
   <p><?php echo _("Note that the 'Reject' setting explicitly blocks that service totally, and can only be overridden by access from a Trusted Zone. This is functionally equivalent to turning off access from all zones, unless you are running an extra Firewall plugin."); ?></p>
 <?php
+$version = \FreePBX::Config()->get('ASTVERSION');
+$vercompare = version_compare($version, '21', 'ge');
 foreach ($coresvc as $s) {
+	if($s == 'chansip' && $vercompare) {
+		continue;
+	}
 	$currentzones = array();
 	$svc = $fw->getService($s);
 	foreach ($svc['zones'] as $zone) {
