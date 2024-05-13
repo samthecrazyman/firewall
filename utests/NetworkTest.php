@@ -10,7 +10,7 @@ class NetworkTest extends PHPUnit_Framework_TestCase {
 
 	public static function setUpBeforeClass() {
 		include __DIR__.'/../Network.class.php';
-		self::$n = new FreePBX\modules\Firewall\Network;
+		self::$n = new FreePBX\modules\Firewall\Network();
 	}
 
 	public function testDiscover() {
