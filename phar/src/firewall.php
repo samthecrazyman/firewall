@@ -160,7 +160,7 @@ include_once $path;
 // they are configured correctly.
 $path = $v->checkFile("Network.class.php");
 include_once $path;
-$netobj = new \FreePBX\modules\Firewall\Network;
+$netobj = new \FreePBX\modules\Firewall\Network();
 
 $known = $netobj->discoverInterfaces();
 foreach ($known as $int => $conf) {

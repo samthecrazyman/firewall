@@ -1904,7 +1904,7 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 		static $ints = false;
 		if (!$ints) {
 			include 'Network.class.php';
-			$n = new Firewall\Network;
+			$n = new Firewall\Network();
 			$ints = $n->discoverInterfaces();
 		}
 		return $ints;
@@ -2476,6 +2476,22 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 			$p->execute($defaults);
 		}
 		return;
+	}
+
+	public function getInterfaceZone($interface) {
+		return $this->getConfig("$interface-zone");
+	}
+
+	public function setInterfaceZone($interface, $zone) {
+		return $this->setConfig("$interface-zone", $zone);
+	}
+
+	public function getInterfaceDescription($interface) {
+		return $this->getConfig("$interface-description");
+	}
+
+	public function setInterfaceDescription($interface, $description) {
+		return $this->setConfig("$interface-description", $description);
 	}
 }
 

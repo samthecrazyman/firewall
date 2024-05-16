@@ -28,6 +28,10 @@ if (!is_array($settings)) {
 
 // Now we've passed the first checks, we can load the fake (root-owned-file) FreePBX and GPG objects
 require '/usr/lib/sysadmin/includes.php';
+if (!@include_once(getenv('FREEPBX_CONF') ? getenv('FREEPBX_CONF') : '/etc/freepbx.conf')) {
+	include_once('/etc/asterisk/freepbx.conf');
+}
+
 $g = new \Sysadmin\GPG();
 $sigfile = \Sysadmin\FreePBX::Config()->get('AMPWEBROOT')."/admin/modules/firewall/module.sig";
 $sig = $g->checkSig($sigfile);
@@ -72,7 +76,7 @@ use FreePBX\modules\Firewall\Zones;
 use FreePBX\modules\Firewall\Network;
 
 // Get our list of interfaces and zones to validate against
-$n = new Network;
+$n = new Network();
 $ifaces = $n->discoverInterfaces();
 $z = new Zones();
 $zones = $z->getZones();
