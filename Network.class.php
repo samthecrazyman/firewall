@@ -7,7 +7,7 @@ class Network {
 	public $freepbx;
 
 	public function __construct() {
-		$this->freepbx = \FreePBX::create();
+		$this->freepbx = \FreePBX::Create();
 	}
 	
 	public function discoverInterfaces() {
