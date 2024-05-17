@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-09 07:48-0400\n"
+"POT-Creation-Date: 2024-05-17 04:50-0400\n"
 "PO-Revision-Date: 2020-09-02 11:50+0000\n"
 "Last-Translator: Javier Pastor <jpastor@cerebelum.net>\n"
 "Language-Team: Spanish <http://*/projects/freepbx/firewall/es/>\n"
@@ -462,7 +462,7 @@ msgstr "Intentando eliminar '%s' de la zona '%s' ... "
 msgid "Automatically add hosts from file /etc/hosts to Trusted Zone"
 msgstr ""
 
-#: OOBE.class.php:242
+#: OOBE.class.php:244
 msgid "Automatically configure Asterisk IP Settings?"
 msgstr "¿Configurar automáticamente la configuración de IP de Asterisk?"
 
@@ -890,7 +890,7 @@ msgid ""
 "untrusted sources"
 msgstr ""
 
-#: OOBE.class.php:257
+#: OOBE.class.php:259
 #, php-format
 msgid "External Address: %s"
 msgstr "Dirección Externa: %s"
@@ -1021,7 +1021,7 @@ msgstr "El firewall no está activado, no se puede desactivar"
 msgid "Firewall recovery rules: %s"
 msgstr ""
 
-#: OOBE.class.php:244
+#: OOBE.class.php:246
 #, fuzzy
 msgid ""
 "Firewall should now auto-detect and configure External IP settings. This "
@@ -1356,7 +1356,7 @@ msgstr ""
 msgid "Known Network Definitions"
 msgstr ""
 
-#: OOBE.class.php:258
+#: OOBE.class.php:260
 msgid "Known Networks:"
 msgstr ""
 
@@ -1990,7 +1990,7 @@ msgstr ""
 msgid "See Custom Service page"
 msgstr ""
 
-#: OOBE.class.php:256
+#: OOBE.class.php:258
 msgid ""
 "Selecting 'Yes' will update your current configuration. Selecting 'No' will "
 "not change your current settings."
@@ -2686,7 +2686,7 @@ msgstr ""
 msgid "Warnging:"
 msgstr ""
 
-#: OOBE.class.php:215 OOBE.class.php:256 views/disabled.php:6
+#: OOBE.class.php:215 OOBE.class.php:258 views/disabled.php:6
 msgid "Warning"
 msgstr "Advertencia"
 
@@ -2805,7 +2805,7 @@ msgid ""
 "you can select Clear All to remove all entries from the whitelist.'"
 msgstr ""
 
-#: OOBE.class.php:246
+#: OOBE.class.php:248
 msgid ""
 "You can verify these settings in Sip Settings after this wizard is complete. "
 "If you have a non-static IP address, you may need to use a DDNS provider "
@@ -2818,7 +2818,7 @@ msgid ""
 "be automatically monitored and updated."
 msgstr ""
 
-#: OOBE.class.php:245
+#: OOBE.class.php:247
 msgid ""
 "You should say 'Yes' to this, unless you have an extremely complex network "
 "with multiple external default gateways."

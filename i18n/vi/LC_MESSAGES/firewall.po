@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-09 07:48-0400\n"
+"POT-Creation-Date: 2024-05-17 04:50-0400\n"
 "PO-Revision-Date: 2017-08-09 11:27+0200\n"
 "Last-Translator: PETER <ftek@ymail.com>\n"
 "Language-Team: Vietnamese <http://weblate.freepbx.org/projects/freepbx/"
@@ -459,7 +459,7 @@ msgstr "Đang cố xóa %s khỏi Vùng '%s\"... "
 msgid "Automatically add hosts from file /etc/hosts to Trusted Zone"
 msgstr ""
 
-#: OOBE.class.php:242
+#: OOBE.class.php:244
 msgid "Automatically configure Asterisk IP Settings?"
 msgstr "Tự động cấu hình Các cài đặt IP Asterisk?"
 
@@ -887,7 +887,7 @@ msgid ""
 "untrusted sources"
 msgstr ""
 
-#: OOBE.class.php:257
+#: OOBE.class.php:259
 #, php-format
 msgid "External Address: %s"
 msgstr "Địa chỉ bên ngoài: %s"
@@ -1018,7 +1018,7 @@ msgstr "Firewall không được kích hoạt, không thể vô hiệu hóa nó"
 msgid "Firewall recovery rules: %s"
 msgstr ""
 
-#: OOBE.class.php:244
+#: OOBE.class.php:246
 msgid ""
 "Firewall should now auto-detect and configure External IP settings. This "
 "will assist with NAT or Translation issues."
@@ -1388,7 +1388,7 @@ msgstr ""
 msgid "Known Network Definitions"
 msgstr "Các định nghĩa mạng đã biết"
 
-#: OOBE.class.php:258
+#: OOBE.class.php:260
 msgid "Known Networks:"
 msgstr "Các mạng đã biết:"
 
@@ -2077,7 +2077,7 @@ msgstr ""
 msgid "See Custom Service page"
 msgstr "Xem trang Custom Service (Dịch vụ tùy chỉnh)"
 
-#: OOBE.class.php:256
+#: OOBE.class.php:258
 msgid ""
 "Selecting 'Yes' will update your current configuration. Selecting 'No' will "
 "not change your current settings."
@@ -2849,7 +2849,7 @@ msgstr ""
 msgid "Warnging:"
 msgstr ""
 
-#: OOBE.class.php:215 OOBE.class.php:256 views/disabled.php:6
+#: OOBE.class.php:215 OOBE.class.php:258 views/disabled.php:6
 msgid "Warning"
 msgstr "Cảnh báo"
 
@@ -2985,7 +2985,7 @@ msgid ""
 "you can select Clear All to remove all entries from the whitelist.'"
 msgstr ""
 
-#: OOBE.class.php:246
+#: OOBE.class.php:248
 msgid ""
 "You can verify these settings in Sip Settings after this wizard is complete. "
 "If you have a non-static IP address, you may need to use a DDNS provider "
@@ -3003,7 +3003,7 @@ msgstr ""
 "Bạn sẽ nhập các hostname ở đây ( bao gồm các host DNS) mà chúng sẽ được cập "
 "nhật và điều khiển tự động."
 
-#: OOBE.class.php:245
+#: OOBE.class.php:247
 msgid ""
 "You should say 'Yes' to this, unless you have an extremely complex network "
 "with multiple external default gateways."
