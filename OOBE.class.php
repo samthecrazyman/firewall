@@ -226,6 +226,8 @@ class OOBE {
 			$this->fw->setConfig("pjsip", $zones, "servicesettings");
 			$this->fw->setConfig("chansip", $zones, "servicesettings");
 			$this->fw->setConfig('responsivefw', true);
+			
+			$this->fw->setConfig('pjsip', true, 'rfw');
 		} else {
 			$this->fw->setConfig('responsivefw', false);
 		}
