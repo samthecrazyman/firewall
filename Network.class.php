@@ -3,13 +3,9 @@
 namespace FreePBX\modules\Firewall;
 
 class Network {
-
-	public $freepbx;
-
-	public function __construct() {
-		$this->freepbx = \FreePBX::Create();
-	}
 	
+	CONST INTERFACE_ZONES_CONFIG = '/var/spool/asterisk/firewall/interface-zones.json';
+
 	public function discoverInterfaces() {
 		exec("/sbin/ip -o addr", $result, $ret);
 		if ($ret != 0) {
@@ -120,10 +116,7 @@ class Network {
 
 	public function getRedhatInterfaceConfig($int) {
 		// No config
-		$conf = [
-			'ZONE' => $this->freepbx->Firewall->getInterfaceZone($int),
-			'DESCRIPTION' => $this->freepbx->Firewall->getInterfaceDescription($int)
-		];
+		$conf = $this->getInterfaceZoneData($int);
 		if (is_readable("/etc/network/interfaces.d/$int")) {
 			$fileContent = file_get_contents("/etc/network/interfaces.d/$int");
 			$lines = explode("\n", $fileContent);
@@ -204,8 +197,6 @@ class Network {
 			return true;
 		}
 
-		$this->freepbx->Firewall->setInterfaceZone($iface, $newzone);
-
 		if (!$descr) {
 			$descr = "unset"; // Magic string
 		}
@@ -214,7 +205,45 @@ class Network {
 		// escapeshellcmd
 		$descr = escapeshellcmd(str_replace(array('\'', '"'), "", $descr));
 
-		$this->freepbx->Firewall->setInterfaceDescription($iface, $descr);
+		$data = [
+			'ZONE' => $newzone,
+			'DESCRIPTION' => $descr
+		];
+		$this->updateInterfaceZoneData($iface, $data);
+	}
+
+	public function getAllInterfaceZoneData() {
+		if (!file_exists(self::INTERFACE_ZONES_CONFIG)) {
+			return [];
+		}
+
+		$data = file_get_contents(self::INTERFACE_ZONES_CONFIG);
+		if (!$data) {
+			return [];
+		}
+
+		return json_decode($data, true);
+	}
+
+	public function getInterfaceZoneData($interface) {
+		$interfaceZoneData = $this->getAllInterfaceZoneData();
+		if (!isset($interfaceZoneData[$interface])) {
+			return [
+				'ZONE' => 'external',
+				'DESCRIPTION' => 'unset'
+			];
+		}
+
+		return $interfaceZoneData[$interface];
+	}
+
+	public function updateInterfaceZoneData($interface, $data) {
+		if (!file_exists(self::INTERFACE_ZONES_CONFIG)) {
+			return false;
+		}
+		$interfaceZoneData = $this->getAllInterfaceZoneData();
+		$interfaceZoneData[$interface] = $data;
+		return file_put_contents(self::INTERFACE_ZONES_CONFIG, json_encode($interfaceZoneData));
 	}
 }
 
