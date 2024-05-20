@@ -190,6 +190,22 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 		if($nt->exists("firewall", "1")) {
 			$nt->delete("firewall", "1");
 		}
+
+		$firewallDirectory = '/var/spool/asterisk/firewall/';
+		if (!file_exists($firewallDirectory)) {
+			mkdir($firewallDirectory);
+			chown($firewallDirectory, "asterisk");
+			chgrp($firewallDirectory, "asterisk");
+			chmod($firewallDirectory, 0664);
+		}
+
+		$interfaceZoneConfig = '/var/spool/asterisk/firewall/interface-zones.json';
+		if (!file_exists($interfaceZoneConfig)) {
+			touch($interfaceZoneConfig);
+			chown($interfaceZoneConfig, "asterisk");
+			chgrp($interfaceZoneConfig, "asterisk");
+			chmod($interfaceZoneConfig, 0664);
+		}
 	}
 	
 	public function uninstall() {
@@ -2476,22 +2492,6 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 			$p->execute($defaults);
 		}
 		return;
-	}
-
-	public function getInterfaceZone($interface) {
-		return $this->getConfig("$interface-zone");
-	}
-
-	public function setInterfaceZone($interface, $zone) {
-		return $this->setConfig("$interface-zone", $zone);
-	}
-
-	public function getInterfaceDescription($interface) {
-		return $this->getConfig("$interface-description");
-	}
-
-	public function setInterfaceDescription($interface, $description) {
-		return $this->setConfig("$interface-description", $description);
 	}
 }
 
