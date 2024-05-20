@@ -204,7 +204,7 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 			touch($interfaceZoneConfig);
 			chown($interfaceZoneConfig, "asterisk");
 			chgrp($interfaceZoneConfig, "asterisk");
-			chmod($interfaceZoneConfig, 0664);
+			chmod($interfaceZoneConfig, 0755);
 		}
 	}
 	
