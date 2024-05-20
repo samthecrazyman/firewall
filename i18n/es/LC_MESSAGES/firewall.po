@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-20 09:38-0400\n"
+"POT-Creation-Date: 2024-05-20 11:34-0400\n"
 "PO-Revision-Date: 2020-09-02 11:50+0000\n"
 "Last-Translator: Javier Pastor <jpastor@cerebelum.net>\n"
 "Language-Team: Spanish <http://*/projects/freepbx/firewall/es/>\n"
@@ -65,7 +65,7 @@ msgstr "%s es una solución de gestión de llamadas basada en web."
 msgid "%s is not configured correctly."
 msgstr "%s no está configurado correctamente."
 
-#: Console/Firewall.class.php:502
+#: Console/Firewall.class.php:503
 #, php-format
 msgid "%s is not currently in the blacklist."
 msgstr ""
@@ -300,11 +300,11 @@ msgstr ""
 msgid "All Tunnel Interfaces are automatically set to Local"
 msgstr "Todas las Interfaces de Túnel se establecen automáticamente en Local"
 
-#: Console/Firewall.class.php:575
+#: Console/Firewall.class.php:576
 msgid "All blacklisted entries."
 msgstr "Todas las entradas de la lista negra."
 
-#: Console/Firewall.class.php:566
+#: Console/Firewall.class.php:567
 #, php-format
 msgid "All entries in zone '%s':"
 msgstr "Todas las entradas en la zona '%s':"
@@ -340,7 +340,7 @@ msgid ""
 "acme-challenge folder during an active certificate update request."
 msgstr ""
 
-#: Console/Firewall.class.php:337 Console/Firewall.class.php:353
+#: Console/Firewall.class.php:338 Console/Firewall.class.php:354
 msgid "An error has occurred!"
 msgstr "¡Se ha producido un error!"
 
@@ -443,17 +443,17 @@ msgid ""
 msgstr ""
 "Al finalizar este asistente, el firewall se habilitará automáticamente."
 
-#: Console/Firewall.class.php:410
+#: Console/Firewall.class.php:411
 #, fuzzy, php-format
 msgid "Attempting to add '%s' to Blacklist ... "
 msgstr "Intentando agregar '%s' a la lista negra ... "
 
-#: Console/Firewall.class.php:419
+#: Console/Firewall.class.php:420
 #, fuzzy, php-format
 msgid "Attempting to add '%s' to Zone '%s' ... "
 msgstr "Intentando agregar '%s' a la Zona '%s' ... "
 
-#: Console/Firewall.class.php:511
+#: Console/Firewall.class.php:512
 #, php-format
 msgid "Attempting to remove %s from '%s' Zone ... "
 msgstr "Intentando eliminar '%s' de la zona '%s' ... "
@@ -800,7 +800,7 @@ msgstr ""
 "Si deja esto desactivado, se descarta silenciosamente el paquete, sin dar "
 "ninguna indicación al atacante de que su tráfico ha sido interceptado."
 
-#: Console/Firewall.class.php:307
+#: Console/Firewall.class.php:308
 msgid "Enabling Firewall."
 msgstr "Activando Firewall."
 
@@ -850,20 +850,20 @@ msgstr "Error!"
 msgid "Error!! Permission denied copy rules: %s"
 msgstr ""
 
-#: Console/Firewall.class.php:502
+#: Console/Firewall.class.php:503
 msgid "Error:"
 msgstr "Error:"
 
-#: Console/Firewall.class.php:415
+#: Console/Firewall.class.php:416
 #, php-format
 msgid "Error: Can't add '%s' to unknown zone '%s'"
 msgstr "Error: No se puede agregar '%s' a la zona desconocida '%s'"
 
-#: Console/Firewall.class.php:323
+#: Console/Firewall.class.php:324
 msgid "Error: Missing argument. Expected 'enable' or 'disable'."
 msgstr "Error: Falta un argumento. Se esperaba 'enable' o 'disable'."
 
-#: Console/Firewall.class.php:361
+#: Console/Firewall.class.php:362
 #, php-format
 msgid "Error: Unknown option '%s'. Expected 'enable or 'disable'."
 msgstr "Error: Opción desconocida '%s'. Se esperaba 'enable' o 'disable'."
@@ -923,7 +923,7 @@ msgstr ""
 msgid "Failed to update Firewall Interface"
 msgstr ""
 
-#: Console/Firewall.class.php:431
+#: Console/Firewall.class.php:432
 msgid "Failed! Could not validate entry. Please try again."
 msgstr "¡Ha fallado! No se pudo validar la entrada. Inténtalo de nuevo."
 
@@ -1012,7 +1012,7 @@ msgstr ""
 msgid "Firewall has not started yet!"
 msgstr "¡El Firewall aun no se ha iniciado todavía!"
 
-#: Console/Firewall.class.php:299
+#: Console/Firewall.class.php:300
 msgid "Firewall is not enabled, can't disable it"
 msgstr "El firewall no está activado, no se puede desactivar"
 
@@ -1300,7 +1300,7 @@ msgstr ""
 msgid "Intrusion Detection Sync Firewall"
 msgstr ""
 
-#: Console/Firewall.class.php:292
+#: Console/Firewall.class.php:293
 msgid "Intrusion Detection is available for all activated systems only."
 msgstr ""
 
@@ -1384,19 +1384,19 @@ msgstr ""
 msgid "Length of time in seconds a remote IP is banned before being reset."
 msgstr ""
 
-#: Console/Firewall.class.php:357
+#: Console/Firewall.class.php:358
 msgid "Lets Encrypt rules already disabled. Nothing to do."
 msgstr ""
 
-#: Console/Firewall.class.php:341
+#: Console/Firewall.class.php:342
 msgid "Lets Encrypt rules already enabled. Nothing to do"
 msgstr ""
 
-#: Console/Firewall.class.php:350
+#: Console/Firewall.class.php:351
 msgid "Lets Encrypt rules disabled successfully."
 msgstr ""
 
-#: Console/Firewall.class.php:334
+#: Console/Firewall.class.php:335
 msgid "Lets Encrypt rules enabled successfully."
 msgstr ""
 
@@ -1862,7 +1862,7 @@ msgstr ""
 msgid "Remove the hostname or IP specified from the Trusted Zone"
 msgstr ""
 
-#: Console/Firewall.class.php:506
+#: Console/Firewall.class.php:507
 #, php-format
 msgid "Removed %s from Blacklist."
 msgstr ""
@@ -2167,8 +2167,8 @@ msgstr ""
 msgid "Stop the System Firewall"
 msgstr ""
 
-#: Console/Firewall.class.php:412 Console/Firewall.class.php:456
-#: Console/Firewall.class.php:555
+#: Console/Firewall.class.php:413 Console/Firewall.class.php:457
+#: Console/Firewall.class.php:556
 msgid "Success!"
 msgstr ""
 
@@ -2186,19 +2186,19 @@ msgid ""
 "detection whitelist."
 msgstr ""
 
-#: Console/Firewall.class.php:269
+#: Console/Firewall.class.php:270
 msgid ""
 "Syncing cannot be performed because another synchronization is still in "
 "progress."
 msgstr ""
 
-#: Console/Firewall.class.php:288
+#: Console/Firewall.class.php:289
 msgid ""
 "Syncing cannot be performed because the Intrusion Detection Sync Firewall "
 "setting is set to Legacy mode."
 msgstr ""
 
-#: Console/Firewall.class.php:280
+#: Console/Firewall.class.php:281
 #, php-format
 msgid ""
 "Syncing takes a long time. No news for %d seconds. Unlocking syncing. Please "
@@ -2648,7 +2648,7 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: Console/Firewall.class.php:534
+#: Console/Firewall.class.php:535
 msgid "Unknown entry!"
 msgstr ""
 
@@ -2839,7 +2839,7 @@ msgstr ""
 msgid "Zone"
 msgstr ""
 
-#: Console/Firewall.class.php:398 Console/Firewall.class.php:489
+#: Console/Firewall.class.php:399 Console/Firewall.class.php:490
 #, php-format
 msgid "Zone %s = %s "
 msgstr ""
@@ -2906,7 +2906,7 @@ msgstr ""
 msgid "list the configurations details"
 msgstr ""
 
-#: Console/Firewall.class.php:272
+#: Console/Firewall.class.php:273
 msgid "synchronization overlap. Canceling this action for now."
 msgstr ""
 
