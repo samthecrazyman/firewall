@@ -4,9 +4,10 @@ namespace FreePBX\modules\Firewall;
 
 class Network {
 
-	private $firewall;
+	public $freepbx;
 
 	public function __construct() {
+		$this->freepbx = \FreePBX::Create();
 	}
 	
 	public function discoverInterfaces() {
@@ -120,8 +121,8 @@ class Network {
 	public function getRedhatInterfaceConfig($int) {
 		// No config
 		$conf = [
-			'ZONE' => $this->getFirewallObj()->getInterfaceZone($int),
-			'DESCRIPTION' => $this->getFirewallObj()->getInterfaceDescription($int)
+			'ZONE' => $this->freepbx->Firewall->getInterfaceZone($int),
+			'DESCRIPTION' => $this->freepbx->Firewall->getInterfaceDescription($int)
 		];
 		if (is_readable("/etc/network/interfaces.d/$int")) {
 			$fileContent = file_get_contents("/etc/network/interfaces.d/$int");
@@ -174,14 +175,6 @@ class Network {
 		return $conf;
 	}
 
-	function getFirewallObj() {
-		if (!$this->firewall) {
-			$this->firewall = \FreePBX::Firewall();
-		}
-		return $this->firewall;
-	}
-
-
 	public function getDefault() {
 		// returns interface the default route is on
 		exec("/sbin/route -n", $result, $ret);
@@ -211,7 +204,7 @@ class Network {
 			return true;
 		}
 
-		$this->getFirewallObj()->setInterfaceZone($iface, $newzone);
+		$this->freepbx->Firewall->setInterfaceZone($iface, $newzone);
 
 		if (!$descr) {
 			$descr = "unset"; // Magic string
@@ -221,7 +214,7 @@ class Network {
 		// escapeshellcmd
 		$descr = escapeshellcmd(str_replace(array('\'', '"'), "", $descr));
 
-		$this->getFirewallObj()->setInterfaceDescription($iface, $descr);
+		$this->freepbx->Firewall->setInterfaceDescription($iface, $descr);
 	}
 }
 
