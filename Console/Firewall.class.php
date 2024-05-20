@@ -264,6 +264,7 @@ class Firewall extends Command {
 				}
 				else{
 					$ptime=(strtotime("now") - $syncing);
+					$msg='';
 					switch($ptime){
 						case ($ptime < 250):
 							$msg = "<info>"._("Syncing cannot be performed because another synchronization is still in progress.")."</info>";
