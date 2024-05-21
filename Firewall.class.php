@@ -196,7 +196,7 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 			mkdir($firewallDirectory);
 			chown($firewallDirectory, "asterisk");
 			chgrp($firewallDirectory, "asterisk");
-			chmod($firewallDirectory, 0664);
+			chmod($firewallDirectory, 0755);
 		}
 
 		$interfaceZoneConfig = '/var/spool/asterisk/firewall/interface-zones.json';
