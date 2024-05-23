@@ -1,2 +1,2 @@
 #!/bin/bash
-/sbin/chkconfig fail2ban off
+/usr/bin/systemctl disable fail2ban
