@@ -300,7 +300,7 @@ class OOBE {
 		$_REQUEST["command"] = "updateinterfaces";
 		$_REQUEST["module"] = "firewall";
 		$_REQUEST["ints"] = json_encode($devices);
-		$this->fw->ajaxHandler();
+		// $this->fw->ajaxHandler();
 
 		// I don't like these loops, it feels messy.
 		foreach ($myroutes as $r) {

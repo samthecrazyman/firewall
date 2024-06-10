@@ -1022,6 +1022,7 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 		if(!$this->FreePBX->Sysadmin->isActivated()){
 			return false;
 		}
+		$list = [];
 		
 		/**
 		 * Used by console to syncing / updating the whitelist dynamically.
