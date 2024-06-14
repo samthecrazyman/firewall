@@ -2168,6 +2168,7 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 		}
 		
 		if((!empty($nets[$net]) && $nets[$net] == trim($zone)) || (!empty($hostmap[$net]) && $hostmap[$net] == trim($zone))){
+			$this->saveHostDescription($net, $descr);
 			/**
 			 * No need to update or change something that already exists!
 			 * The risk is to break something else through the hook.
@@ -2180,15 +2181,7 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 		$this->setConfig("networkmaps", $nets);
 
 		// Update our description, if needed
-		if ($descr) {
-			$descriptions = $this->getConfig("descriptions", "network");
-			if (!is_array($descriptions)) {
-				$descriptions = array($net => $descr);
-			} else {
-				$descriptions[$net] = $descr;
-			}
-			$this->setConfig("descriptions", $descriptions, "network");
-		}
+		$this->saveHostDescription($net, $descr);
 
 		return $this->runHook("changenetwork", array("network" => $net, "newzone" => $zone));
 	}
@@ -2492,6 +2485,18 @@ class Firewall extends \FreePBX_Helpers implements \BMO {
 			$p->execute($defaults);
 		}
 		return;
+	}
+
+	private function saveHostDescription($net, $descr=null) {
+		if (!empty($descr)) {
+			$descriptions = $this->getConfig("descriptions", "network");
+			if (!is_array($descriptions)) {
+				$descriptions = array($net => $descr);
+			} else {
+				$descriptions[$net] = $descr;
+			}
+			$this->setConfig("descriptions", $descriptions, "network");
+		}
 	}
 }
 
